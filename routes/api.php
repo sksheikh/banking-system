@@ -8,5 +8,11 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // })->middleware('auth:sanctum');
 
+Route::get('/', function(){
+    return response()->json([
+        'message' => 'success',
+        'data' => null
+    ]);
+});
 
 Route::apiResource('v1/users', UserController::class);
